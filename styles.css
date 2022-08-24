@@ -1,0 +1,78 @@
+body {
+  width: 100vw;
+  background-color: #9e9184;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  display: flex;
+  height: 400px;
+  position: relative;
+  padding: 50px;
+  overflow: scroll;
+  box-sizing: border-box;
+  align-items: center;
+  transition: 1s smooth;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: center;
+  padding: 0 100px;
+}
+.image-block {
+  min-width: 200px;
+  height: 200px;
+
+  cursor: pointer;
+  transform: rotate(20deg);
+  transition: 1s;
+  position: relative;
+}
+.image-cont {
+  border: 2px solid #000;
+  position: absolute;
+}
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.left-arrow {
+  left: 10px;
+}
+.right-arrow {
+  right: 10px;
+}
+
+img {
+  width: 100%;
+}
+.image-block:hover {
+  transform: rotate(0);
+}
+.margin-maker {
+  transform: rotate(0);
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+.rotate-right {
+  transform: rotate(10deg);
+}
+.rotate-left {
+  transform: rotate(-10deg);
+}
+#inone {
+  transition: 2s;
+}
+#intwo {
+  transition: 2s;
+}
+.godown {
+  margin-top: 100vh;
+}
