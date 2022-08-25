@@ -12,8 +12,6 @@ var elements = [
     "three",
     "four",
     "five",
-    "six",
-    "seven",
 ]
 
 var addmargin = (element) => {

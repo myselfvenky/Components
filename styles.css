@@ -31,11 +31,11 @@ body {
   scroll-snap-align: center;
 }
 .image-block {
-  min-width: 200px;
-  width: 200px;
-  height: 200px;
-  max-width: 200px;
-  max-height: 200px;
+  min-width: 300px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
   cursor: pointer;
   transform: rotate(20deg);
   transition: 1s;
