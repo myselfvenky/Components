@@ -1,0 +1,269 @@
+<html>
+<head>
+    <style>
+    body {
+      width: 100vw;
+      background-color: #9e9184;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .main-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      height: 700px;
+      width: 100vw;
+      position: relative;
+      overflow: scroll;
+      overflow-y: hidden;
+      justify-content: center;
+      box-sizing: border-box;
+      align-items: center;
+      transition: 1s smooth;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scroll-snap-align: center;
+    }
+    .image-block {
+      min-width: 200px;
+      width: 200px;
+      height: 200px;
+      max-width: 200px;
+      max-height: 200px;
+      cursor: pointer;
+      transform: rotate(20deg);
+      transition: 1s;
+      position: relative;
+    }
+    .image-cont {
+      /* border: 2px solid #000; */
+      position: absolute;
+    }
+    .left-arrow,
+    .right-arrow {
+      position: absolute;
+      bottom: 0;
+      user-select: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .left-arrow {
+      left: 10px;
+    }
+    .right-arrow {
+      right: 10px;
+    }
+    #one {
+      transform: rotate(-20deg);
+    }
+    #two {
+      transform: rotate(20deg);
+    }
+    #three {
+      transform: rotate(-10deg);
+    }
+    #four {
+      transform: rotate(-25deg);
+    }
+    #five {
+      transform: rotate(30deg);
+    }
+    #six {
+      transform: rotate(10deg);
+    }
+    #seven {
+      transform: rotate(-20deg);
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    .image-block:hover {
+      transform: rotate(0);
+    }
+    .margin-maker {
+      transform: rotate(0);
+      padding: 200px;
+      margin: 0 60vw;
+      /* transform: scale(1); */
+    }
+    .rotate-right {
+      transform: rotate(10deg);
+    }
+    .rotate-center {
+      transform: rotate(0deg);
+    }
+    .rotate-left {
+      transform: rotate(-10deg);
+    }
+    #inone,
+    #intwo {
+      transition: 2s;
+    }
+    .godown {
+      margin-top: 200vh;
+    }
+    
+    </style>
+    <script>
+    const scrollleft = () => {
+        console.log("Left")
+        document.getElementById("img-container").scrollLeft -= 400;
+    }
+    const scrollright = () => {
+        console.log("Right")
+        document.getElementById("img-container").scrollLeft += 400;
+    }
+    var elements = [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+    ]
+    
+    var addmargin = (element) => {
+        elements.map((id) => {
+            if (id != element.id) {
+                var el = document.getElementById(id)
+                el.classList.remove("margin-maker")
+                console.log(el.querySelectorAll("div").item)
+                document.getElementById("carousel").style.backgroundColor = "none"
+                el.querySelectorAll("div")[0].classList.remove("rotate-center")
+                el.querySelectorAll("div")[1].classList.remove("rotate-right")
+                el.querySelectorAll("div")[2].classList.remove("rotate-left")
+                setTimeout(() => {
+                    el.classList.remove("godown")
+                }, 1000)
+            }
+        })
+        // no.classList.add("margin-maker")
+        var el = document.getElementById(element.id)
+        el.classList.add("margin-maker")
+    
+        document.getElementById("carousel").style.backgroundColor = "#000"
+        var data = el.querySelectorAll("div")[0].classList.add("rotate-center")
+        var data = el.querySelectorAll("div")[1].classList.add("rotate-right")
+        var data = el.querySelectorAll("div")[2].classList.add("rotate-left")
+        setTimeout(() => {
+            el.classList.add("godown")
+        }, 2000)
+        console.log(data)
+    
+    
+    
+    }
+    </script>
+    </head>
+     <body>
+        <div class="main-container" id = "carousel">
+        <div class="container" id = "img-container">
+    
+                <div class="image-block" id = "one" onclick="addmargin(one)">
+                    <div class="image-cont" id = "inone">    
+                        <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
+                    </div>
+                    <div class="image-cont" id = "intwo">
+                        <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                    </div>
+                    <div class="iamge-cont" id = "inthree">
+                        <img src="https://i.ibb.co/Dt1S474/three.jpg" />
+                    </div>
+                </div>
+           
+     
+            <div class="image-block" id = "two" onclick="addmargin(two)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/NLgFdMW/four.jpg" />
+                </div>
+            </div>
+    
+    
+            <div class="image-block" id = "three" 
+            onclick="addmargin(three)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
+                </div>
+    
+          
+            </div>  
+    
+            <div class="image-block" id = "four" onclick= "addmargin(four)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/NLgFdMW/four.jpg" />
+                </div>
+            </div>
+    
+            <div class="image-block" id = "five"onclick= "addmargin(five)" >
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/NLgFdMW/four.jpg" />
+                </div>
+            </div>
+            <div class="image-block" id = "six" onclick= "addmargin(six)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
+                </div>
+            </div>
+            <div class="image-block" id = "seven" onclick= "addmargin(seven)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/Dt1S474/three.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
+                </div>
+            </div>
+          
+        </div>
+          <div class="left-arrow" id = "leftarrow" onclick = "scrollleft()">
+            &#8592
+          </div>
+          <div class="right-arrow" id = "rightarrow" onclick="scrollright()">
+            &#8594
+          </div>
+        </div>
+      </body>
+      </html>
