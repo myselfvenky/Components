@@ -14,9 +14,6 @@ var elements = [
     "five",
     "six",
     "seven",
-    "eight",
-    "nine",
-    "ten"
 ]
 
 var addmargin = (element) => {
@@ -25,6 +22,8 @@ var addmargin = (element) => {
             var el = document.getElementById(id)
             el.classList.remove("margin-maker")
             console.log(el.querySelectorAll("div").item)
+            document.getElementById("carousel").style.backgroundColor = "none"
+            el.querySelectorAll("div")[0].classList.remove("rotate-center")
             el.querySelectorAll("div")[1].classList.remove("rotate-right")
             el.querySelectorAll("div")[2].classList.remove("rotate-left")
             setTimeout(() => {
@@ -36,18 +35,15 @@ var addmargin = (element) => {
     var el = document.getElementById(element.id)
     el.classList.add("margin-maker")
 
-
+    document.getElementById("carousel").style.backgroundColor = "#000"
+    var data = el.querySelectorAll("div")[0].classList.add("rotate-center")
     var data = el.querySelectorAll("div")[1].classList.add("rotate-right")
     var data = el.querySelectorAll("div")[2].classList.add("rotate-left")
     setTimeout(() => {
         el.classList.add("godown")
-    }, 1000)
+    }, 2000)
     console.log(data)
 
 
-
-}
-var removemargin = () => {
-    document.getElementsByClassName("image-block").length
 
 }

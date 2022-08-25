@@ -9,21 +9,22 @@
     <script src="./Script/index.js"></script>
   </head>
   <body>
-    <h1>Memories </h1>
+    <div class="main-container" id = "carousel">
     <div class="container" id = "img-container">
-  
-        <div class="image-block" id = "one" onclick="addmargin(one)">
-            <div class="image-cont" id = "inone">    
-                <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
+
+            <div class="image-block" id = "one" onclick="addmargin(one)">
+                <div class="image-cont" id = "inone">    
+                    <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
+                </div>
+                <div class="image-cont" id = "intwo">
+                    <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
+                </div>
+                <div class="iamge-cont" id = "inthree">
+                    <img src="https://i.ibb.co/Dt1S474/three.jpg" />
+                </div>
             </div>
-            <div class="image-cont" id = "intwo">
-                <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
-            </div>
-            <div class="iamge-cont" id = "inthree">
-                <img src="https://i.ibb.co/Dt1S474/three.jpg" />
-            </div>
-        </div>
-    
+       
+ 
         <div class="image-block" id = "two" onclick="addmargin(two)">
             <div class="image-cont" id = "inone">    
                 <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
@@ -37,7 +38,8 @@
         </div>
 
 
-        <div class="image-block" id = "three" onclick="addmargin(three)">
+        <div class="image-block" id = "three" 
+        onclick="addmargin(three)">
             <div class="image-cont" id = "inone">    
                 <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
             </div>
@@ -47,8 +49,9 @@
             <div class="iamge-cont" id = "inthree">
                 <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
             </div>
-        </div>
+
       
+        </div>  
 
         <div class="image-block" id = "four" onclick= "addmargin(four)">
             <div class="image-cont" id = "inone">    
@@ -61,7 +64,7 @@
                 <img src="https://i.ibb.co/NLgFdMW/four.jpg" />
             </div>
         </div>
-    
+
         <div class="image-block" id = "five"onclick= "addmargin(five)" >
             <div class="image-cont" id = "inone">    
                 <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
@@ -95,39 +98,7 @@
                 <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
             </div>
         </div>
-        <div class="image-block" id = "eight" onclick= "addmargin(eight)">
-            <div class="image-cont" id = "inone">    
-                <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
-            </div>
-            <div class="image-cont" id = "intwo">
-                <img src="https://i.ibb.co/Dt1S474/three.jpg" />
-            </div>
-            <div class="iamge-cont" id = "inthree">
-                <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
-            </div>
-        </div>
-        <div class="image-block" id = "nine" onclick= "addmargin(nine)">
-            <div class="image-cont" id = "inone">    
-                <img src="https://i.ibb.co/d7wqXYQ/six.jpg" />
-            </div>
-            <div class="image-cont" id = "intwo">
-                <img src="https://i.ibb.co/3MTLZ4L/two.jpg" />
-            </div>
-            <div class="iamge-cont" id = "inthree">
-                <img src="https://i.ibb.co/NLgFdMW/four.jpg" />
-            </div>
-        </div>
-        <div class="image-block" id = "ten" onclick= "addmargin(ten)">
-            <div class="image-cont" id = "inone">    
-                <img src="https://i.ibb.co/d2X42gJ/one.jpg" />
-            </div>
-            <div class="image-cont" id = "intwo">
-                <img src="https://i.ibb.co/Dt1S474/three.jpg" />
-            </div>
-            <div class="iamge-cont" id = "inthree">
-                <img src="https://i.ibb.co/ZLjRh3b/five.jpg" />
-            </div>
-        </div>
+      
     </div>
       <div class="left-arrow" id = "leftarrow" onclick = "scrollleft()">
         &#8592
@@ -135,6 +106,6 @@
       <div class="right-arrow" id = "rightarrow" onclick="scrollright()">
         &#8594
       </div>
-      <button onclick="removemargin()"> Collapse</button>
+    </div>
   </body>
 </html>

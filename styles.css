@@ -9,37 +9,47 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .container {
   display: flex;
-  height: 400px;
+  height: 700px;
+  width: 100vw;
   position: relative;
-  padding: 50px;
   overflow: scroll;
+  overflow-y: hidden;
+  justify-content: center;
   box-sizing: border-box;
   align-items: center;
   transition: 1s smooth;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scroll-snap-align: center;
-  padding: 0 100px;
 }
 .image-block {
   min-width: 200px;
+  width: 200px;
   height: 200px;
-
+  max-width: 200px;
+  max-height: 200px;
   cursor: pointer;
   transform: rotate(20deg);
   transition: 1s;
   position: relative;
 }
 .image-cont {
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   position: absolute;
 }
 .left-arrow,
 .right-arrow {
   position: absolute;
   bottom: 0;
+  user-select: none;
   font-size: 2rem;
   cursor: pointer;
 }
@@ -49,30 +59,53 @@ body {
 .right-arrow {
   right: 10px;
 }
-
+#one {
+  transform: rotate(-20deg);
+}
+#two {
+  transform: rotate(20deg);
+}
+#three {
+  transform: rotate(-10deg);
+}
+#four {
+  transform: rotate(-25deg);
+}
+#five {
+  transform: rotate(30deg);
+}
+#six {
+  transform: rotate(10deg);
+}
+#seven {
+  transform: rotate(-20deg);
+}
 img {
-  width: 100%;
+  width: 200px;
+  height: 200px;
 }
 .image-block:hover {
   transform: rotate(0);
 }
 .margin-maker {
   transform: rotate(0);
-  margin-left: 30vw;
-  margin-right: 30vw;
+  padding: 200px;
+  margin: 0 60vw;
+  /* transform: scale(1); */
 }
 .rotate-right {
   transform: rotate(10deg);
 }
+.rotate-center {
+  transform: rotate(0deg);
+}
 .rotate-left {
   transform: rotate(-10deg);
 }
-#inone {
-  transition: 2s;
-}
+#inone,
 #intwo {
   transition: 2s;
 }
 .godown {
-  margin-top: 100vh;
+  margin-top: 200vh;
 }
